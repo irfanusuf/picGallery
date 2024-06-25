@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  document.getElementById("btn").addEventListener("click", () => {
-    const x = document.getElementById("something").value;
+  document.getElementById("search-button").addEventListener("click", () => {
+    const x = document.getElementById("search-input").value;
     fetchVideos(x);
   });
 });

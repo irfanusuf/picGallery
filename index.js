@@ -1,8 +1,6 @@
 const fetchImages = async (query) => {
   const endpoint = `https://api.pexels.com/v1/search?query=${query}&per_page=80`;
   
-  // const endpoint = `https://api.pexels.com/v1/curated?page=${query}&per_page=40`;
-  
   const apiKey = "EbvixQkEPE7kqKI2qHd0ackQCu5roaHHF5jiJvSykgsxxKTcf80F2vKY";
 
   try {
@@ -22,6 +20,41 @@ const fetchImages = async (query) => {
     console.log(error);
   }
 };
+
+
+
+const fetchCuratedImages = async (query) => {
+
+  
+  const endpoint = `https://api.pexels.com/v1/curated?page=${query}&per_page=80`;
+  
+  const apiKey = "EbvixQkEPE7kqKI2qHd0ackQCu5roaHHF5jiJvSykgsxxKTcf80F2vKY";
+
+  try {
+    const res = await fetch(endpoint, {
+      method: "GET",
+      headers: {
+        Authorization: apiKey,
+      },
+    });
+
+    const data = await res.json();
+    const pics = data.photos;
+
+    displayImages(pics);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+
+
+fetchCuratedImages(1)
+
+
+
+
 
 // create a state function
 
@@ -51,6 +84,10 @@ function displayImages(pics) {
     PicElement.appendChild(textElement);
   });
 }
+
+
+
+
 
 document.getElementById("search-button").addEventListener("click", () => {
   const query = document.getElementById("search-input").value;

@@ -43,9 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
       publishedAt.classList.add("published-at");
       publishedAt.innerHTML = news.publishedAt;
 
+
       const source = document.createElement("a");
       source.classList.add("link");
       source.href = news.url;
+      source.target =true
       source.innerHTML = "Read more ....";
 
       targetDiv.appendChild(newsElement);

@@ -1,13 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   async function instaSearch(query) {
-    // const url = `https://instagram-scraper-api2.p.rapidapi.com/v1/search_users?search_query= ${query}`;
+    const url = `https://instagram-scraper-api2.p.rapidapi.com/v1/search_hashtags?search_query= ${query}`;
 
-
-  const url = `https://instagram-scraper-api2.p.rapidapi.com/v1/posts?username_or_id_or_url=${query}`;
-
-
-
-
+    // const url = 'https://instagram-scraper-api2.p.rapidapi.com/v1/search_hashtags?search_query=mrbeast';
     const options = {
       method: "GET",
       headers: {
@@ -25,9 +20,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-
-instaSearch("photogram.kashmir")
-
-
-
+  instaSearch("instagram");
 });

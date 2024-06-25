@@ -1,4 +1,4 @@
-.body-light {
+body {
   background-color: #f0f0f0;
   color: #333;
   font-family: Arial, sans-serif;
@@ -86,7 +86,8 @@
   > .news-title {
     text-align: center;
     font-weight: 700;
-    font-size: 56px;
+    font-size: 32px;
+    width: 1000px;
     font-family: Arial, Helvetica, sans-serif;
   }
 
@@ -94,13 +95,33 @@
     border-radius: 10px;
     margin-bottom: 50px;
     margin-top: 50px;
+    width: 1000px;
   }
 
-  > .news-description{
-
+  > .news-description {
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
-    width: 50%;
+    width: 1000px;
     margin-bottom: 50px;
+  }
+
+  >.published-at{
+    margin-bottom: 20px;
+  }
+
+  >.link{
+    margin-bottom: 20px;
+
+  }
+}
+
+.video-container {
+  width: 1080px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+
+  > video {
+    width: 100%;
   }
 }
